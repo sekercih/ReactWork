@@ -1,0 +1,18 @@
+.yorum{
+ background-color: rgb(170, 144, 144);
+ border-radius: 10px;
+ width: 300px;
+ 
+}
+
+.yorum p{
+ color: red;
+}
+.yorum h2{
+ color: rgb(22, 216, 22);
+}
+
+img{
+ height: 50%;
+ width: 50%;
+}
