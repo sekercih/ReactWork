@@ -1,0 +1,44 @@
+body{
+ text-align: center;
+ font-family: monospace;
+}
+
+h1{
+ color: rgba(10, 221, 21, 0.904);
+ text-shadow:1px 1px 3px #000000;
+}
+
+
+h2{
+ color: rgb(13, 36, 238);
+ text-shadow:3px 3px 5px #000000;
+ font-size: 30px;
+box-shadow:2px 2px 2px #000000;
+border: 1px solid;
+}
+
+
+p{
+ color: rgb(161, 16, 16);
+ text-shadow:3px 3px 5px #000000;
+ font-size: 30px;
+box-shadow:2px 2px 2px #000000;
+border: 1px solid;
+}
+
+img{
+ width: 15%;
+
+
+}
+Container{
+ 
+}
+
+.divKisi{
+ background-color: rgb(156, 240, 240);
+ float: left;
+ padding: 10px;
+ margin: 10px;
+
+}
