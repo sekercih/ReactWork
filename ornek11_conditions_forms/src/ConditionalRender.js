@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Navbar, Button } from "react-bootstrap";
 const Kart = () => {
   return (
@@ -31,11 +31,23 @@ const Footer = () => {
   );
 };
 function ConditionalRender() {
+  const [goster, setGoster] = useState(false);
+  console.log(goster);
+  function gosterGizle() {
+    setGoster(!goster);
+  }
   return (
     <div className="text-center">
-      <button className="btn btn-warning m-4 p-3">goster/gizle</button>
-      <Kart />
-      <Footer />
+      <button onClick={gosterGizle} className="btn btn-warning m-4 p-3">
+        goster/gizle
+      </button>
+      {/* {goster && <Kart />}
+      {!goster && <Footer />} */}
+      {goster||<Kart/> }
+      {!goster||<Footer/> }
+
+      {goster? <Kart/>:<Footer/>}
+    
     </div>
   );
 }
