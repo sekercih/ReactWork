@@ -1,33 +1,29 @@
 import React, { useState } from "react";
-import "./Form.css"
+import "./Form.css";
 
-function Form01  (){
- const [ad,setAd]=useState("");
- function AdGuncelle(event){
-setAd(event.target.value);
- }
+function Form02() {
+  const [form, setForm] = useState({ ad: "", soyad: "", mesaj: "" });
 
-const [soyad,Setsoyad]=useState("");
-function soyadGuncelle(event){
-Setsoyad(event.target.value)
-}
-const [mesaj,SetMesaj]=useState("");
-function mesajGuncelle(event) {
-  SetMesaj(event.target.value);
-}
+  const { ad, soyad, mesaj } = form;
+  console.log("FORM", form);
 
-
-
-
+  function guncelle(event) {
+    const { name, value } = event.target;
+    setForm(() => {
+      return {
+        ...form,
+        [name]: value,
+      };
+    });
+  }
 
   return (
     <div className="alan">
-      {ad.length > 2 && (
+      {ad && (
         <h1>
-          Merhaba {ad} {soyad} 
+          Merhaba {ad} {soyad}
         </h1>
       )}
-
       <form>
         <input
           className="input"
@@ -35,16 +31,16 @@ function mesajGuncelle(event) {
           placeholder="adiniz"
           name="ad"
           required
-          onChange={AdGuncelle}
+          onChange={guncelle}
           value={ad}
         />
         <input
           className="input"
           type="text"
           placeholder="soyadiniz"
-          name="ad"
+          name="soyad"
           required
-          onChange={soyadGuncelle}
+          onChange={guncelle}
           value={soyad}
         />
         <textarea
@@ -54,12 +50,13 @@ function mesajGuncelle(event) {
           cols="30"
           rows="10"
           value={mesaj}
-          onChange={mesajGuncelle}
+          onChange={guncelle}
         ></textarea>
-        <button type="submit">Gönder</button>
+
+        <button type="submit">Gonder</button>
       </form>
     </div>
   );
-};
+}
 
-export default Form01;
+export default Form02;
