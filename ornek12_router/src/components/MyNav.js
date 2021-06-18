@@ -9,6 +9,7 @@ import {
   Button,
 } from "react-bootstrap";
 import logo from "../img/logo.png";
+import { Link } from "react-router-dom";
 
 function MyNav() {
   return (
@@ -19,10 +20,22 @@ function MyNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Kurslar</Nav.Link>
-            <Nav.Link href="#link">Kişiler</Nav.Link>
-            <Nav.Link href="#link">İletişim</Nav.Link>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+
+            <Link to="/kurslar" className="nav-link">
+              Kurslar
+            </Link>
+
+            <Link to="/kisiler" className="nav-link">
+              Kişiler
+            </Link>
+
+            <Link to="/iletisim" className="nav-link">
+              İletişim
+            </Link>
+          
           </Nav>
         </Navbar.Collapse>
       </Navbar>
